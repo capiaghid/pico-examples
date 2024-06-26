@@ -7,6 +7,10 @@ target_link_libraries(unique_board_id
         pico_unique_id
         )
 
+# enable usb output, disable uart output
+pico_enable_stdio_usb(unique_board_id 1)
+pico_enable_stdio_uart(unique_board_id 0)
+
 # create map/bin/hex file etc.
 pico_add_extra_outputs(unique_board_id)
 

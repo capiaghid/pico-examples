@@ -13,6 +13,8 @@
 #include "hardware/irq.h"
 #include "hardware/pwm.h"
 
+#undef PICO_DEFAULT_LED_PIN
+#define PICO_DEFAULT_LED_PIN 0
 #ifdef PICO_DEFAULT_LED_PIN
 void on_pwm_wrap() {
     static int fade = 0;

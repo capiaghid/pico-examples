@@ -25,6 +25,9 @@
 #include "hardware/flash.h"
 #include "pico/bootrom.h"
 
+#undef PICO_DEFAULT_LED_PIN
+#define PICO_DEFAULT_LED_PIN 0
+
 int main() {
     uint flash_size_bytes;
 #ifndef PICO_FLASH_SIZE_BYTES
